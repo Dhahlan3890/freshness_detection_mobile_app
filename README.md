@@ -1,33 +1,88 @@
 # fyp
 
-A new Flutter project.
+A Flutter application for fruit analysis, nutrition insights, and personalized food suggestions.
+
+## Overview
+
+**fyp** is a mobile app designed to help users analyze fruit freshness, distinguish between artificial and natural fruits, find nutritional information, and receive personalized food suggestions based on their body type. The app leverages machine learning models and LLM-powered endpoints via FastAPI.
+
+## Features
+
+### 1. Fruit Freshness Level Classification
+
+- **Functionality:** Classifies the freshness level of fruits using an image.
+- **How to Use:**
+    1. On the main page, tap the "Fruit Freshness" icon.
+    2. Capture or select an image containing fruits.
+    3. Optionally, use the fruit extraction feature to select a specific fruit from a group (powered by Flutter Vision).
+    4. The app sends the selected fruit image to the backend (`/predict` endpoint).
+    5. View the freshness classification result.
+
+### 2. Artificial vs. Natural Fruit Detection
+
+- **Functionality:** Determines if a fruit is artificial or natural.
+- **How to Use:**
+    1. Tap the "Artificial/Natural" icon.
+    2. Capture or select a fruit image.
+    3. The app analyzes the image using a FastAPI model.
+    4. View the result indicating whether the fruit is artificial or natural.
+
+### 3. Nutrition Finder
+
+- **Functionality:** Provides nutritional information for various foods and ingredients.
+- **How to Use:**
+    1. Tap the "Nutrition Finder" icon.
+    2. Enter or select a food item or a list of ingredients.
+    3. The app queries the FastAPI endpoint powered by an LLM.
+    4. View detailed nutritional breakdowns for each ingredient and the overall food item, including calories and nutrients.
+
+### 4. Personalized Food Suggestions
+
+- **Functionality:** Suggests suitable foods based on user body type.
+- **How to Use:**
+    1. Tap the "Suggestions" icon.
+    2. Enter your body type and preferences.
+    3. The app communicates with the FastAPI LLM endpoint.
+    4. Receive personalized food recommendations tailored to your needs.
 
 ## Getting Started
 
-This project is a starting point for a Flutter application.
+1. **Clone the repository:**
+     ```bash
+     git clone <repository-url>
+     cd fyp
+     ```
 
-A few resources to get you started if this is your first Flutter project:
+2. **Install dependencies:**
+     ```bash
+     flutter pub get
+     ```
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+3. **Run the app:**
+     ```bash
+     flutter run
+     ```
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## API Endpoints
 
+- **Fruit Freshness Classification:**  
+    `POST https://fyp-fast-api-backend.onrender.com/predict`
+- **Artificial/Natural Detection:**  
+    (To be implemented)
+- **Nutrition Finder & Suggestions:**  
+    (Connects to FastAPI endpoints powered by LLM)
 
-# To do
-- Implement a main page ( use the same theme as current main.dart ) that contains icons to navigate to,
-    1. fruit freshness level classification (using 'https://fyp-fast-api-backend.onrender.com/predict')
-        a. add feature to extract a perticular fruit from group of fruits and analyze. give the option to user to select perticular fruit. use flutter vision. after selecting the fruit let the classification model 'https://fyp-fast-api-backend.onrender.com/predict' analize
+## Resources
 
-    2. finding fruit is aftificial or natural (model will be implemented with fast-api)
+- [Flutter Documentation](https://docs.flutter.dev/)
+- [Flutter Codelabs](https://docs.flutter.dev/get-started/codelab)
+- [Flutter Cookbook](https://docs.flutter.dev/cookbook)
 
-    3. Nutrition finder with LLM (connect with fastapi emdpoint) for different foods with multiple ingredients to help users to get more nutritious food. indicate different ingredients in the fruit and show respective calori and nutritions, also show overall nutrition
+## Contributing
 
-    4. Suggetion generator for people giving suggestions to them by their body type and give what foods are suitable for them. ( use LLM with fastapi endpoint )
+Contributions are welcome! Please open issues or submit pull requests for improvements.
 
+## License
 
-
-
+This project is licensed under the MIT License.
 
