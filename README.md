@@ -63,15 +63,6 @@ A Flutter application for fruit analysis, nutrition insights, and personalized f
      flutter run
      ```
 
-## API Endpoints
-
-- **Fruit Freshness Classification:**  
-    `POST https://fyp-fast-api-backend.onrender.com/predict`
-- **Artificial/Natural Detection:**  
-    (To be implemented)
-- **Nutrition Finder & Suggestions:**  
-    (Connects to FastAPI endpoints powered by LLM)
-
 ## Resources
 
 - [Flutter Documentation](https://docs.flutter.dev/)
