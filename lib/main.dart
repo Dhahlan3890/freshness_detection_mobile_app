@@ -1112,7 +1112,7 @@ class _ScanTabState extends State<ScanTab> with SingleTickerProviderStateMixin {
 
     try {
       // API endpoint for freshness detection
-      final apiUrl = 'https://a176913e156f.ngrok-free.app/predict';
+      final apiUrl = 'https://stable-famous-flea.ngrok-free.app/predict';
       
       // Create multipart request
       var request = http.MultipartRequest('POST', Uri.parse(apiUrl));
@@ -2400,7 +2400,7 @@ class SettingsPage extends StatefulWidget {
 
 class _SettingsPageState extends State<SettingsPage> {
   bool _notificationsEnabled = true;
-  String _apiEndpoint = 'https://a176913e156f.ngrok-free.app/predict';
+  String _apiEndpoint = 'https://stable-famous-flea.ngrok-free.app/predict';
 
   @override
   void initState() {
@@ -2412,7 +2412,7 @@ class _SettingsPageState extends State<SettingsPage> {
     final prefs = await SharedPreferences.getInstance();
     setState(() {
       _notificationsEnabled = prefs.getBool('notifications_enabled') ?? true;
-      _apiEndpoint = prefs.getString('api_endpoint') ?? 'https://a176913e156f.ngrok-free.app/predict';
+      _apiEndpoint = prefs.getString('api_endpoint') ?? 'https://stable-famous-flea.ngrok-free.app/predict';
     });
   }
 
@@ -2693,7 +2693,7 @@ class _FreshnessClassificationPageState extends State<FreshnessClassificationPag
 
     try {
       // API endpoint for freshness detection
-      final apiUrl = 'https://a176913e156f.ngrok-free.app/predict';
+      final apiUrl = 'https://stable-famous-flea.ngrok-free.app/predict';
       
       var request = http.MultipartRequest('POST', Uri.parse(apiUrl));
       request.files.add(await http.MultipartFile.fromPath('image', _image!.path));
@@ -3164,7 +3164,7 @@ class _NaturalArtificialPageState extends State<NaturalArtificialPage> with Sing
 
     try {
       // API endpoint for natural vs artificial detection
-      final apiUrl = 'https://a176913e156f.ngrok-free.app/natural-artificial';
+      final apiUrl = 'https://stable-famous-flea.ngrok-free.app/natural-artificial';
       
       var request = http.MultipartRequest('POST', Uri.parse(apiUrl));
       request.files.add(await http.MultipartFile.fromPath('image', _image!.path));
@@ -3638,7 +3638,7 @@ class _NutritionFinderPageState extends State<NutritionFinderPage> {
 
     try {
       // API endpoint for nutrition analysis
-      final apiUrl = 'https://a176913e156f.ngrok-free.app/nutrition-analysis';
+      final apiUrl = 'https://stable-famous-flea.ngrok-free.app/nutrition-analysis';
       
       var request = http.MultipartRequest('POST', Uri.parse(apiUrl));
       request.files.add(await http.MultipartFile.fromPath('image', _image!.path));
@@ -4115,7 +4115,7 @@ class _FoodSuggestionsPageState extends State<FoodSuggestionsPage> {
 
     try {
       // API endpoint for food suggestions
-      final apiUrl = 'https://a176913e156f.ngrok-free.app/food-suggestions';
+      final apiUrl = 'https://stable-famous-flea.ngrok-free.app/food-suggestions';
       
       // Create form data request
       var request = http.MultipartRequest('POST', Uri.parse(apiUrl));
